@@ -44,6 +44,7 @@ public class CalculatorUtilityImplTestParameterized {
     @MethodSource("provideTestParameters")
     public void solvePlusMinusMultiply(String operation, Integer num1, Integer num2, Integer expected){
         int result = Integer.parseInt(out.solve(operation, num1, num2).replaceAll(".+ = ",""));
+        System.out.println(result);
         assertEquals(expected, result);
     }
 
